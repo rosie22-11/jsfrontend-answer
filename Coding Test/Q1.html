@@ -1,0 +1,22 @@
+<html>
+<head>
+	<script>
+	var num = [1,2,3,4,6,8,19];
+	
+	function load(){
+	var data = "";
+	num.map(x=>{
+	if(x%2 == 0){
+  data = data + x + " ";
+	}
+	});
+
+	document.getElementById("demo").innerHTML = data;
+	}
+	</script>
+
+</head>
+<body onload="load()">
+  <h2 id="demo">hi</h2>
+</body>
+</html>

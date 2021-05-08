@@ -1,0 +1,20 @@
+<html>
+<head>
+<script>
+
+var num = [1,1,2,3,4,5,6,8];
+
+function load(){
+let nums = num.filter((num1, index)=>
+	num.indexOf(num1) != index)
+document.getElementById("demo").innerHTML = nums;
+
+}
+
+</script>
+</head>
+<body onload="load()">
+  <h2 id="demo">
+</h2>
+</body>
+</html>

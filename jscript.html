@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            body{
+                 text-align:center; background-color: rosybrown;
+            }
+            input[type="text"]{
+                padding: 1rem ;  padding-left: 10rem; padding-right: 10rem; text-align: center;
+            }
+            button{
+                padding: 1rem ; font-weight: bold; font-size: 15px; margin-left: 20px;  border-radius: 10px;
+                padding-left: 2rem; padding-right: 2rem;
+            }
+            .result-box{
+                margin: auto; margin-top: 1rem; padding: .5rem; border-radius: 3px ;
+                height: 20px; width: 100px; background-color: sandybrown;
+            }
+            
+
+        </style>
+        <script>
+            var list=[];
+            
+            function todolist(){
+                var data = "";
+                list.map(x=>{
+                    data = data + "<div class='result-box'>";
+                    data = data + x;
+                    data = data + "</div>";
+                })
+                document.getElementById("result").innerHTML = data;
+            }
+
+            function add(){
+                var a = document.getElementById("fname").value;
+                list.push(a);
+                todolist();
+                document.getElementById("fname").value = "";
+                
+            }
+        </script>
+    </head>
+    <body onload="todolist()">
+       
+        <h1>Todo List</h1>
+        <input type="text" id="fname"/>
+        <button onclick="add()" >Add</button>
+<div id="result"></div>
+
+    </body>
+</html>

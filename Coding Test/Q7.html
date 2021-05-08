@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script>
+		var url = "http://www.example.com/api/get/1";
+
+	var x = new XMLHttpRequest();
+
+	x.open("GET", url, true);
+
+	x.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
+	let result = document.getElementById("demo");
+
+	result.innerHTML = this.responseText;
+	}
+	}
+
+	x.send();
+	
+	
+	
+	
+	
+	</script>
+</head>
+<body>
+  <div id="demo"></div>
+</body>
+</html>
